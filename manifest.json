@@ -1,0 +1,27 @@
+{
+  "name": "WebWarden",
+  "description": "Web warden: A Chrome Extension for Enhanced Web Browsing Security through Domain-based Risk Recognition.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "Extension16.png",
+    "48": "Extension48.png",
+    "128": "Extension128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["WebWarden.js"]
+    }
+  ],
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["view/warning.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
